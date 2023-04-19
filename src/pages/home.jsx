@@ -1,3 +1,11 @@
+import Header from '../components/home/header';
+
 export default function Home() {
-   return <div>Home</div>;
+   return (
+      <main>
+         <section className='bg-[#F0F3F3]'>
+            <Header />
+         </section>
+      </main>
+   );
 }
