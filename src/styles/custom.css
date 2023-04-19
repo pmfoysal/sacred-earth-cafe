@@ -28,3 +28,24 @@ body {
    border-bottom-left-radius: 10px;
    border-bottom-right-radius: 10px;
 }
+
+.footer-button {
+   height: 2rem;
+   width: 2rem;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 5px 5px 13px 0px rgba(222, 222, 222, 0.9), -5px -5px 10px 0px rgba(255, 255, 255, 0.9),
+      5px -5px 10px 0px rgba(222, 222, 222, 0.2), -5px 5px 10px 0px rgba(222, 222, 222, 0.2);
+}
+
+.footer-button img {
+   height: 20px;
+   width: auto;
+}
+
+.footer-button.active {
+   box-shadow: 2px 2px 5px 0px rgba(212, 212, 212, 0.9) inset, -2px -2px 4px 0px rgba(255, 255, 255, 0.9) inset,
+      2px -2px 4px 0px rgba(212, 212, 212, 0.2) inset, -2px 2px 4px 0px rgba(212, 212, 212, 0.2) inset;
+}
