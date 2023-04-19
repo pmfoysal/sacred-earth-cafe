@@ -6,3 +6,25 @@ body {
    background-color: #f1f1f1;
    box-shadow: 1.5px 1.5px 3px 0px #aeaec066, -1px -1px 3px 0px #ffffff;
 }
+
+.category-button.active {
+   color: #3cbcb4;
+}
+
+.category-button.active::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   height: 2px;
+   width: 100%;
+   border-radius: 1rem;
+   background-color: #3cbcb4;
+}
+
+.home-header {
+   background-color: #f0f3f3;
+   box-shadow: 1.5px 1.5px 3px 0px rgba(174, 174, 192, 0.4), -1px -1px 3px 0px rgba(255, 255, 255, 1);
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
