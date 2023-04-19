@@ -1,3 +1,4 @@
+import Banner from '../components/home/banner';
 import Filter from '../components/home/filter';
 import Footer from '../components/home/footer';
 import Header from '../components/home/header';
@@ -9,6 +10,7 @@ export default function Home() {
             <Header />
             <Filter />
          </section>
+         <Banner />
          <Footer />
       </main>
    );
