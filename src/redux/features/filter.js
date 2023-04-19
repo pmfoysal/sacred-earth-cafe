@@ -15,4 +15,4 @@ const filter = createSlice({
 });
 
 export default filter.reducer;
-export const {} = filter.actions;
+export const { setCategory } = filter.actions;
