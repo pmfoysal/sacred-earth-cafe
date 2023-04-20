@@ -1,13 +1,21 @@
+import { useDispatch } from 'react-redux';
 import plus from '../../assets/icons/plus.svg';
 import safety from '../../assets/icons/safety.svg';
+import { addToCart } from '../../redux/features/orders';
 
 export default function FoodItem({ type = '', ...data }) {
-   if (type === 'today') return <TodaySpecial {...data} />;
-   else if (type === 'week') return <WeekSpecial {...data} />;
-   return <FoodRow {...data} />;
+   const dispatch = useDispatch();
+
+   function handleAdd() {
+      dispatch(addToCart({ ...data, quantity: 1 }));
+   }
+
+   if (type === 'today') return <TodaySpecial {...data} onAdd={handleAdd} />;
+   else if (type === 'week') return <WeekSpecial {...data} onAdd={handleAdd} />;
+   return <FoodRow {...data} onAdd={handleAdd} />;
 }
 
-function TodaySpecial({ id, name, image, price }) {
+function TodaySpecial({ name, image, price, onAdd }) {
    return (
       <div className='food-item-container'>
          <img src={image} alt={name} className='food-item-image' />
@@ -20,7 +28,7 @@ function TodaySpecial({ id, name, image, price }) {
                <h1 className='food-item-price'>
                   ₹<span>{price}</span>
                </h1>
-               <button className='food-item-button'>
+               <button className='food-item-button' onClick={onAdd}>
                   <span>
                      <img src={plus} alt='Plus' />
                   </span>
@@ -32,7 +40,7 @@ function TodaySpecial({ id, name, image, price }) {
    );
 }
 
-function WeekSpecial({ id, name, image, price, tags }) {
+function WeekSpecial({ name, image, price, tags, onAdd }) {
    return (
       <div className='food-item-container'>
          <img src={image} alt={name} className='food-item-image !aspect-[2.5]' />
@@ -54,7 +62,7 @@ function WeekSpecial({ id, name, image, price, tags }) {
                      </p>
                   ))}
                </div>
-               <button className='food-item-button'>
+               <button className='food-item-button' onClick={onAdd}>
                   <span>
                      <img src={plus} alt='Plus' />
                   </span>
@@ -66,7 +74,7 @@ function WeekSpecial({ id, name, image, price, tags }) {
    );
 }
 
-function FoodRow({ id, name, image, price }) {
+function FoodRow({ name, image, price, onAdd }) {
    return (
       <div className='food-item-container type-row'>
          <img src={image} alt={name} className='food-item-image' />
@@ -76,7 +84,7 @@ function FoodRow({ id, name, image, price }) {
                <h1 className='food-item-price flex items-center'>
                   <img src={safety} alt='Safety' className='mr-2' />₹<span>{price}</span>
                </h1>
-               <button className='food-item-button'>
+               <button className='food-item-button' onClick={onAdd}>
                   <span>
                      <img src={plus} alt='Plus' />
                   </span>

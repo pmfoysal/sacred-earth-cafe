@@ -1,4 +1,3 @@
-import store from '../store';
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -15,7 +14,7 @@ const orders = createSlice({
          // if product is not found in current orders
          if (index === -1) state.current.push(action.payload);
          // if product is found in current orders
-         else store.dispatch(orders.actions.updateQuantity({ id: action.payload.id, factor: 1 }));
+         else state.current[index].quantity = state.current[index].quantity + 1;
       },
       updateQuantity: (state, action) => {
          // find the product from current orders

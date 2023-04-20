@@ -215,3 +215,20 @@ body {
    border-radius: 10px;
    overflow: hidden;
 }
+
+.order-header-button {
+   background: #f1f1f1;
+   box-shadow: -5px 5px 10px rgba(222, 222, 222, 0.2), 5px -5px 10px rgba(222, 222, 222, 0.2),
+      -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(222, 222, 222, 0.9);
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 32px;
+   width: 32px;
+}
+
+.order-header-button img {
+   height: 20px;
+   width: auto;
+}
