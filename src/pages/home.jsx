@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import { useSelector } from 'react-redux';
+import { Helmet } from 'react-helmet-async';
 import Banner from '../components/home/banner';
 import Filter from '../components/home/filter';
 import Footer from '../components/home/footer';
@@ -9,11 +10,12 @@ import FoodItem from '../components/common/foodItem';
 import FoodsToday from '../components/home/foodsToday';
 import { selectCategory } from '../redux/selectors/filter';
 import FoodsAccordion from '../components/common/foodsAccordion';
-import { selectSubCategories, selectSubCategoriesByCategory } from '../redux/selectors/categories';
-import { selectFoods, selectFoodsByCategory, selectSubCategoryFoods } from '../redux/selectors/foods';
+import { selectFoodsByCategory, selectSubCategoryFoods } from '../redux/selectors/foods';
+import { selectCategoryName, selectSubCategories, selectSubCategoriesByCategory } from '../redux/selectors/categories';
 
 export default function Home() {
    const category = useSelector(selectCategory);
+   const categoryName = useSelector(selectCategoryName(category));
 
    function renderPage(category) {
       if (category === 1) return <SpecialFoods />;
@@ -23,6 +25,9 @@ export default function Home() {
 
    return (
       <main>
+         <Helmet>
+            <title>{categoryName} | Sacred Earth Cafe</title>
+         </Helmet>
          <section className='home-header'>
             <Header />
             <Filter />

@@ -19,3 +19,10 @@ export function selectSubCategoriesByCategory(category) {
       return [];
    };
 }
+
+export function selectCategoryName(category) {
+   return store => {
+      const cat = store.categories.main.find(item => item.id === category);
+      return cat?.name || '';
+   };
+}

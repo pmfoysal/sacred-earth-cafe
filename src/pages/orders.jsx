@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import { useSelector } from 'react-redux';
+import { Helmet } from 'react-helmet-async';
 import Header from '../components/orders/header';
 import Footer from '../components/orders/footer';
 import CartItem from '../components/common/cartItem';
@@ -11,6 +12,9 @@ export default function Orders() {
 
    return (
       <main>
+         <Helmet>
+            <title>Orders | Sacred Earth Cafe</title>
+         </Helmet>
          <Header />
          <section className='pb-20 pt-2'>
             <FoodsAccordion title='Current Orders' className='flex flex-col gap-4 order-container items-start'>
