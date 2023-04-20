@@ -6,7 +6,7 @@ export default function FoodsAccordion({ title, children, className }) {
    const [isOpen, setIsOpen] = useState(true);
 
    return (
-      <section className='p-4 flex flex-col gap-4'>
+      <section className={`px-4 py-2 flex flex-col foods-accordion ${isOpen ? 'gap-4' : 'gap-0'}`}>
          <Title name={title} isOpen={isOpen} setIsOpen={setIsOpen} />
          <article className='foods-container' style={{ height: `${isOpen ? content.current?.offsetHeight : 0}px` }}>
             <div className={className} ref={content}>

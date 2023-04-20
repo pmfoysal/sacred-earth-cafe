@@ -4,6 +4,7 @@ const initialState = [
    {
       id: 1,
       category: 1,
+      trending: 'today',
       name: 'Chocolate Bowl',
       image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/chocolate.png',
       price: 299,
@@ -11,6 +12,7 @@ const initialState = [
    {
       id: 2,
       category: 1,
+      trending: 'today',
       name: 'Sunset Acai Bowl',
       image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/sunset-acai.png',
       price: 159,
@@ -18,6 +20,7 @@ const initialState = [
    {
       id: 3,
       category: 1,
+      trending: 'today',
       name: 'Blueberry Avac Smoothie Bowl',
       image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/blueberry.png',
       price: 199,
@@ -25,6 +28,7 @@ const initialState = [
    {
       id: 4,
       category: 1,
+      trending: 'today',
       name: 'Johnnie Walker Blue Label (1L)',
       image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/bluelabel.png',
       price: 1099,
@@ -32,6 +36,7 @@ const initialState = [
    {
       id: 5,
       category: 1,
+      trending: 'today',
       name: 'Green Goddess',
       image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/sunrise-acai.png',
       price: 219,
@@ -39,17 +44,19 @@ const initialState = [
    {
       id: 6,
       category: 1,
+      trending: 'today',
       name: 'Chocolate Bowl',
       image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/chocolate.png',
       price: 399,
    },
    {
       id: 7,
-      category: 3,
-      subCategory: 5,
-      name: 'Chocolate Bowl',
-      image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/chocolate.png',
-      price: 399,
+      category: 1,
+      trending: 'week',
+      tags: ['VEGAN', 'GLUTEN-FREE'],
+      name: 'Blueberry Avac Smoothie Bowl',
+      image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/blueberry.png',
+      price: 199,
    },
    {
       id: 8,
@@ -62,7 +69,7 @@ const initialState = [
    {
       id: 9,
       category: 3,
-      subCategory: 6,
+      subCategory: 5,
       name: 'Chocolate Bowl',
       image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/chocolate.png',
       price: 399,
@@ -77,8 +84,8 @@ const initialState = [
    },
    {
       id: 11,
-      category: 4,
-      subCategory: 3,
+      category: 3,
+      subCategory: 6,
       name: 'Chocolate Bowl',
       image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/chocolate.png',
       price: 399,
@@ -94,7 +101,7 @@ const initialState = [
    {
       id: 13,
       category: 4,
-      subCategory: 4,
+      subCategory: 3,
       name: 'Chocolate Bowl',
       image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/chocolate.png',
       price: 399,
@@ -109,8 +116,8 @@ const initialState = [
    },
    {
       id: 15,
-      category: 5,
-      subCategory: 1,
+      category: 4,
+      subCategory: 4,
       name: 'Chocolate Bowl',
       image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/chocolate.png',
       price: 399,
@@ -126,13 +133,21 @@ const initialState = [
    {
       id: 17,
       category: 5,
-      subCategory: 2,
+      subCategory: 1,
       name: 'Chocolate Bowl',
       image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/chocolate.png',
       price: 399,
    },
    {
       id: 18,
+      category: 5,
+      subCategory: 2,
+      name: 'Chocolate Bowl',
+      image: 'https://raw.githubusercontent.com/pmfoysal/data/main/sacred-earth-cafe/chocolate.png',
+      price: 399,
+   },
+   {
+      id: 19,
       category: 5,
       subCategory: 2,
       name: 'Chocolate Bowl',
