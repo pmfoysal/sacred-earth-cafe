@@ -40,6 +40,7 @@ const orders = createSlice({
             // if the product is found from the previous orders
             else state.previous[index].quantity += cOrder.quantity;
          });
+         state.current = [];
       },
    },
 });

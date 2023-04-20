@@ -5,12 +5,12 @@ import Filter from '../components/home/filter';
 import Footer from '../components/home/footer';
 import Header from '../components/home/header';
 import FoodsWeek from '../components/home/foodsWeek';
+import FoodItem from '../components/common/foodItem';
 import FoodsToday from '../components/home/foodsToday';
 import { selectCategory } from '../redux/selectors/filter';
-import { selectFoods, selectFoodsByCategory, selectSubCategoryFoods } from '../redux/selectors/foods';
-import { selectSubCategories, selectSubCategoriesByCategory } from '../redux/selectors/categories';
 import FoodsAccordion from '../components/common/foodsAccordion';
-import FoodItem from '../components/common/foodItem';
+import { selectSubCategories, selectSubCategoriesByCategory } from '../redux/selectors/categories';
+import { selectFoods, selectFoodsByCategory, selectSubCategoryFoods } from '../redux/selectors/foods';
 
 export default function Home() {
    const category = useSelector(selectCategory);
