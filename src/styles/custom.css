@@ -209,8 +209,7 @@ body {
 .food-item-container.type-row .food-item-image {
    aspect-ratio: unset;
    width: 71px;
-   height: 100%;
-   min-height: 71px;
+   height: 71px;
    object-fit: cover;
    border-radius: 10px;
    overflow: hidden;
