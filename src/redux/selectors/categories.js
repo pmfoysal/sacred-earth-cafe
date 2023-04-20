@@ -9,3 +9,13 @@ export function selectMainCategories(store) {
 export function selectSubCategories(store) {
    return store.categories.sub;
 }
+
+export function selectSubCategoriesByCategory(category) {
+   return store => {
+      const cat = store.categories.main.find(item => item.id === category);
+      if (cat.subCategories?.length) {
+         return cat.subCategories.map(item => store.categories.sub.find(sc => sc.id === item));
+      }
+      return [];
+   };
+}

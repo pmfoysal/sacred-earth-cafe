@@ -50,7 +50,7 @@ const initialState = {
       },
       {
          id: 6,
-         name: 'Iced Coffe',
+         name: 'Iced Coffee',
       },
    ],
 };

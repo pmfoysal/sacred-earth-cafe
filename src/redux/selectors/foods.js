@@ -13,3 +13,11 @@ export function selectTodaySpecialFoods(store) {
 export function selectWeekSpecialFoods(store) {
    return store.foods.filter(food => food.category === 1 && food.trending === 'week');
 }
+
+export function selectFoodsByCategory(category) {
+   return store => store.foods.filter(food => food.category === category);
+}
+
+export function selectSubCategoryFoods(store) {
+   return store.foods.filter(food => food.subCategory);
+}

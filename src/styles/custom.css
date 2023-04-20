@@ -198,3 +198,20 @@ body {
    -webkit-text-fill-color: transparent;
    background-clip: text;
 }
+
+.food-item-container.type-row {
+   display: grid;
+   grid-template-columns: auto 1fr;
+   gap: 1rem;
+   padding: 8px;
+}
+
+.food-item-container.type-row .food-item-image {
+   aspect-ratio: unset;
+   width: 71px;
+   height: 100%;
+   min-height: 71px;
+   object-fit: cover;
+   border-radius: 10px;
+   overflow: hidden;
+}

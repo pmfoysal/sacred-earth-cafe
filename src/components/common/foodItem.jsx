@@ -68,16 +68,13 @@ function WeekSpecial({ id, name, image, price, tags }) {
 
 function FoodRow({ id, name, image, price }) {
    return (
-      <div className='food-item-container'>
+      <div className='food-item-container type-row'>
          <img src={image} alt={name} className='food-item-image' />
-         <div className='p-2 flex flex-col'>
-            <h1 className='food-item-title'>
-               <img src={safety} alt='Safety' />
-               {name}
-            </h1>
+         <div className='flex flex-col'>
+            <h1 className='food-item-title'>{name}</h1>
             <div className='food-item-footer flex-1 pt-2'>
-               <h1 className='food-item-price'>
-                  ₹<span>{price}</span>
+               <h1 className='food-item-price flex items-center'>
+                  <img src={safety} alt='Safety' className='mr-2' />₹<span>{price}</span>
                </h1>
                <button className='food-item-button'>
                   <span>
