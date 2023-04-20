@@ -11,8 +11,10 @@ export default function Home() {
             <Header />
             <Filter />
          </section>
-         <Banner />
-         <FoodsToday />
+         <div className='pb-16'>
+            <Banner />
+            <FoodsToday />
+         </div>
          <Footer />
       </main>
    );

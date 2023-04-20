@@ -1,13 +1,16 @@
-import { useState } from 'react';
-import Title from '../common/title';
+import FoodItem from '../common/foodItem';
+import { useSelector } from 'react-redux';
+import FoodsAccordion from '../common/foodsAccordion';
+import { selectSpecialFoods } from '../../redux/selectors/foods';
 
 export default function FoodsToday() {
-   const [isOpen, setIsOpen] = useState(true);
+   const foods = useSelector(selectSpecialFoods);
 
    return (
-      <section className='p-4'>
-         <Title name='Today’s Special' isOpen={isOpen} setIsOpen={setIsOpen} />
-         <article></article>
-      </section>
+      <FoodsAccordion title='Today’s Special' className='grid grid-cols-2 gap-2'>
+         {foods.map((item, index) => (
+            <FoodItem key={`food-${index}`} {...item} />
+         ))}
+      </FoodsAccordion>
    );
 }

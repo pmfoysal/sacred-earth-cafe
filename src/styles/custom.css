@@ -27,6 +27,10 @@ body {
    box-shadow: 1.5px 1.5px 3px 0px rgba(174, 174, 192, 0.4), -1px -1px 3px 0px rgba(255, 255, 255, 1);
    border-bottom-left-radius: 10px;
    border-bottom-right-radius: 10px;
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 10;
 }
 
 .footer-button {
@@ -82,9 +86,93 @@ body {
 }
 
 .title-container img {
-   transition: 0.25s ease;
+   transition: 0.2s ease;
 }
 
 .title-container .active {
    transform: rotate(-180deg);
+}
+
+.food-item-container {
+   background-color: #f6f6f6;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: inset 2px 2px 5px 0px rgba(205, 205, 205, 0.9), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.9),
+      inset 2px -2px 4px 0px rgba(205, 205, 205, 0.2), inset -2px 2px 4px 0px rgba(205, 205, 205, 0.2);
+}
+
+.food-item-image {
+   aspect-ratio: 1.25/1;
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+
+.food-item-title {
+   width: 100%;
+   display: grid;
+   grid-template-columns: auto 1fr;
+   gap: 4px;
+   color: #4a5662;
+   font-weight: 500;
+   font-size: 14px;
+}
+
+.food-item-title img {
+   height: 1rem;
+   width: auto;
+}
+
+.food-item-footer {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: auto;
+}
+
+.food-item-price {
+   color: #4a5662;
+   font-size: 13px;
+}
+
+.food-item-price span {
+   font-weight: 500;
+}
+
+.food-item-button {
+   padding: 4px;
+   border-radius: 10px;
+   background-color: #f0f0f3;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   color: #4a5662;
+   font-size: 13px;
+   font-weight: 500;
+   padding-right: 8px;
+   box-shadow: 5px 5px 13px 0px rgba(221, 221, 224, 0.9), -5px -5px 10px 0px rgba(255, 255, 255, 0.9),
+      5px -5px 10px 0px rgba(221, 221, 224, 0.2), -5px 5px 10px 0px rgba(221, 221, 224, 0.2);
+}
+
+.food-item-button span {
+   display: inline-block;
+   height: 24px;
+   width: 24px;
+   border-radius: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #f1f1f1;
+   box-shadow: 2px 2px 5px 0px rgba(222, 222, 222, 0.9) inset, -2px -2px 4px 0px rgba(255, 255, 255, 0.9) inset,
+      2px -2px 4px 0px rgba(222, 222, 222, 0.2) inset, -2px 2px 4px 0px rgba(222, 222, 222, 0.2) inset;
+}
+
+.food-item-button span img {
+   height: 10px;
+   width: auto;
+}
+
+.foods-container {
+   overflow: hidden;
+   transition: 0.2s ease;
 }
